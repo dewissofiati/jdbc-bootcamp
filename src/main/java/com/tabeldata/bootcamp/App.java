@@ -17,7 +17,7 @@ public class App {
     static String username = "hr";
     static String password = "hr";
 //    static String query = "insert into mst_nasabah(nama_nasabah, alamat) value(?, ?)";
-    static String query = "create table if not exists mst_nasabah(id serial not null primary key, nama_nasabah varchar(50) not null, alamat varchar(50) not null)";
+    static String query = "create table if not exists mst_tabungan(id serial not null primary key, nasabah_id integer not null, saldo integer not null, nama_tabungan varchar(50) not null)";
 
     public static void main(String[] args) {
         Connection conn = null;
