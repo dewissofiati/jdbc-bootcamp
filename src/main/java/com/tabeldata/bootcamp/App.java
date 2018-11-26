@@ -16,8 +16,7 @@ public class App {
     static String url = "jdbc:postgresql://127.0.0.1:5432/hr";
     static String username = "hr";
     static String password = "hr";
-//    static String query = "insert into mst_nasabah(nama_nasabah, alamat) value(?, ?)";
-    static String query = "create table if not exists mst_tabungan(id serial not null primary key, nasabah_id integer not null, saldo integer not null, nama_tabungan varchar(50) not null)";
+    static String query = "create table if not exists trx_transaksi_tabungan(id serial not null primary key, tabungan_id integer not null, debet integer, kredit integer, saldo integer, tanggal_transaksi timestamp)";
 
     public static void main(String[] args) {
         Connection conn = null;
