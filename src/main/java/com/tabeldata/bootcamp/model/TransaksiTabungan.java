@@ -39,6 +39,17 @@ public class TransaksiTabungan {
     }
 
     public void setJenisTransaksi(Integer jenisTransaksi) {
+        switch(jenisTransaksi){
+            case 0:
+                String jenis = "Setoran Tabungan";
+                break;
+            case 1:
+                jenis = "Penarikan Tabungan";
+                break;
+            case 2:
+                jenis = "Biaya Admin";
+                break;
+        }
         this.jenisTransaksi = jenisTransaksi;
     }
 
