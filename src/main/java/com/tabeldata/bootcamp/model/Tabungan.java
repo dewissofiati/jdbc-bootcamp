@@ -10,18 +10,17 @@ public class Tabungan {
 
     }
 
-    public Tabungan(Integer id, Nasabah nasabah, String namaTabungan, BigDecimal saldo, List<Tabungan> listTabungan) {
+    public Tabungan(Integer id, Integer nasabah, BigDecimal saldo, String namaTabungan) {
         this.id = id;
         this.nasabah = nasabah;
-        this.namaTabungan = namaTabungan;
         this.saldo = saldo;
-        this.listTabungan = listTabungan;
+        this.namaTabungan = namaTabungan;
     }
 
     private Integer id;
-    private Nasabah nasabah;
-    private String namaTabungan;
+    private Integer nasabah;
     private BigDecimal saldo;
+    private String namaTabungan;
     private List<Tabungan> listTabungan = new ArrayList<Tabungan>();
 
     public Integer getId() {
@@ -32,11 +31,11 @@ public class Tabungan {
         this.id = id;
     }
 
-    public Nasabah getNasabah() {
+    public Integer getNasabah() {
         return nasabah;
     }
 
-    public void setNasabah(Nasabah nasabah) {
+    public void setNasabah(Integer nasabah) {
         this.nasabah = nasabah;
     }
 
@@ -62,5 +61,14 @@ public class Tabungan {
 
     public void setListTabungan(List<Tabungan> listTabungan) {
         this.listTabungan = listTabungan;
+    }
+
+    public String toString(){
+        return String.format("{ id : %s, nasabah_id: %s, saldo: %s, nama_tabungan: %s }",
+                this.id,
+                this.nasabah,
+                this.saldo,
+                this.namaTabungan
+        );
     }
 }

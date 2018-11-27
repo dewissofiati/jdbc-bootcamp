@@ -39,4 +39,11 @@ public class Nasabah {
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
+//    @Override
+    public String toString() {
+        return String.format("{ id : %s, nama_nasabah: %s, alamat: %s }",
+                this.id,
+                this.namaNasabah,
+                this.alamat);
+    }
 }
