@@ -64,7 +64,7 @@ public class Tabungan {
     }
 
     public String toString(){
-        return String.format("{ id : %s, nasabah_id: %s, saldo: %s, nama_tabungan: %s }",
+        return String.format("%s \t | %s \t\t | %s \t | %s \t ",
                 this.id,
                 this.nasabah,
                 this.saldo,

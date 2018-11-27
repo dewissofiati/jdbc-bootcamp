@@ -94,7 +94,7 @@ public class TransaksiTabungan {
     }
 
     public String toString(){
-        return String.format("{id : %s, tabungan_id : %s, debet : %s, kredit : %s, saldo : %s, tanggal_transaksi : %s}",
+        return String.format("%s \t | %s \t\t | %s \t | %s \t | %s \t | %s \t ",
         this.id,
         this.tabungan_id,
         this.debet,

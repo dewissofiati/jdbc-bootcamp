@@ -67,6 +67,7 @@ public class App {
             query = "select * from mst_nasabah";
             statement = conn.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
+            System.out.println("id \t | nama_nasabah \t | alamat ");
             while (resultSet.next()) {
                 Nasabah nasabah = new Nasabah(
                         resultSet.getInt(1),
@@ -122,6 +123,7 @@ public class App {
             query = "select * from mst_tabungan";
             statement = conn.prepareStatement(query);
             resultSet = statement.executeQuery();
+            System.out.println("id \t | nasabah_id  \t | saldo \t | nama_tabungan ");
             while (resultSet.next()) {
                 Tabungan tabungan = new Tabungan(
                         resultSet.getInt(1),
@@ -210,6 +212,7 @@ public class App {
             query = "select * from trx_transaksi_tabungan";
             statement = conn.prepareStatement(query);
             resultSet = statement.executeQuery();
+            System.out.println("id \t | tabungan_id \t | debet \t | kredit \t | saldo \t | tanggal_transaksi");
             while(resultSet.next()){
                 TransaksiTabungan transaksiTabungan = new TransaksiTabungan(
                         resultSet.getInt(1),

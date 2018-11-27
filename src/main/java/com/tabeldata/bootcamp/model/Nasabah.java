@@ -41,7 +41,7 @@ public class Nasabah {
     }
 //    @Override
     public String toString() {
-        return String.format("{ id : %s, nama_nasabah: %s, alamat: %s }",
+        return String.format("%s \t | %s \t | %s \t ",
                 this.id,
                 this.namaNasabah,
                 this.alamat);
